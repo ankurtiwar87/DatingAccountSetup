@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object ApiUtilities {
 
-    val BASE_URL="https://cdn.jsdelivr.net/"
+    val BASE_URL="https://corona.lmao.ninja/"
 
     fun getInstance():Retrofit{
 

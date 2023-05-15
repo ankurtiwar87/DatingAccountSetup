@@ -5,8 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.widget.SearchView
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.ankur.datingaccountsetup.Model.flagModel
-import com.ankur.datingaccountsetup.Model.flagModelItem
+import com.ankur.datingaccountsetup.Model.FlagModelItem
 import com.ankur.datingaccountsetup.adapters.CountryAdapter
 import com.ankur.datingaccountsetup.api.ApiInterface
 import com.ankur.datingaccountsetup.api.ApiUtilities
@@ -15,7 +14,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() ,CountryAdapter.OnItemClickListener{
     private lateinit var binding: ActivityMainBinding
     private lateinit var searchView :SearchView
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,8 +24,6 @@ class MainActivity : AppCompatActivity() {
         binding.countryRecyclerView.layoutManager=LinearLayoutManager(this)
 
         getCountryFlag()
-
-
 
     }
 
@@ -43,7 +40,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-                    val adapter=CountryAdapter(this@MainActivity,apiResult.body()!!)
+                    val adapter=CountryAdapter(this@MainActivity,apiResult.body()!!,this@MainActivity)
                     binding.countryRecyclerView.adapter=adapter
 
                 }
@@ -53,4 +50,11 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
+
+    override fun onClickItem(item: FlagModelItem) {
+
+    }
+
+
 }
