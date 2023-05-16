@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">DatingAccountSetup</string>
+    <string name="title_activity_select_chips">SelectChips</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="tv2">Full Name<font color='#FF0000'>*</font></string>
+    <string name="tv3">Email<font color='#FF0000'>*</font></string>
+    <string name="tv4">Phone Number<font color='#FF0000'>*</font></string>
+    <string name="tv5">Gender<font color='#FF0000'>*</font></string>
+    <string name="tv6">Location<font color='#FF0000'>*</font></string>
+    <string name="Gender">Gender</string>
+    <string name="gender">Gender</string>
+    <string-array name="gender_options">
+        <item>Gender</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
 </resources>

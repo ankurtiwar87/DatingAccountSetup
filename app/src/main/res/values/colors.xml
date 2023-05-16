@@ -9,5 +9,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="primaryDateColor1">#FF4D67</color>
     <color name="primaryDateColor2">#FD788C</color>
+    <color name="transparent">@android:color/transparent</color>
+    <color name="cherry">#FD788C</color>
+    <color name="hint_color">#999999</color>
 </resources>
 
