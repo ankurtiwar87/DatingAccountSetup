@@ -3,6 +3,7 @@ package com.ankur.datingaccountsetup
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.widget.SearchView
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -23,13 +24,14 @@ class MainActivity : AppCompatActivity(){
         binding= ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.countryRecyclerView.layoutManager=LinearLayoutManager(this)
-
-        binding.nextBtn.setOnClickListener {
-            val intent = Intent(this,FillYourProfile::class.java)
-            startActivity(intent)
-        }
-
         getCountryFlag()
+
+       binding.nextBtn.setOnClickListener {
+       Intent(applicationContext,FillYourProfile::class.java).also {
+           startActivity(it)
+       }
+
+        }
 
 
 

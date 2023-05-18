@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
     <TextView
         android:id="@+id/textCountry"
         android:layout_width="wrap_content"
@@ -20,18 +19,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton2"
+    <ImageButton
+        android:id="@+id/backBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
-        android:outlineProvider="none"
-        app:backgroundTint="@android:color/transparent"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/primaryDateColor2"
         app:layout_constraintEnd_toStartOf="@id/textCountry"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:tint="#FD788C"
-        tools:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+        android:background="@drawable/ic_baseline_arrow_back_24"
+        android:focusable="true" />
 
     <androidx.appcompat.widget.SearchView
         android:id="@+id/idSV"
