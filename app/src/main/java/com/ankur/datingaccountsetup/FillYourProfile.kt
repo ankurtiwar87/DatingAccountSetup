@@ -1,5 +1,7 @@
 package com.ankur.datingaccountsetup
 
+import android.content.Intent
+import android.content.pm.ActivityInfo
 import com.ankur.datingaccountsetup.adapters.CustomSpinnerAdapter
 import android.graphics.PorterDuff
 import android.net.Uri
@@ -33,6 +35,13 @@ class FillYourProfile : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding=ActivityFillYourProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.button.setOnClickListener {
+             Intent(this,AddBestPhoto::class.java).also {
+                 startActivity(it)
+             }
+
+        }
 
         //making status bar invisible
         WindowCompat.setDecorFitsSystemWindows(window,false)
@@ -102,4 +111,5 @@ class FillYourProfile : AppCompatActivity() {
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
         })
     }
+
 }

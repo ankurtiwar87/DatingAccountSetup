@@ -1,6 +1,7 @@
 package com.ankur.datingaccountsetup
 
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -38,6 +39,7 @@ class MainActivity : AppCompatActivity(){
 
 
     }
+
 
     private fun getCountryFlag() {
         val apiCall = ApiUtilities.getInstance().create(ApiInterface::class.java)

@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".selectYourInterest">
+
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Your Interest"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.394"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.075" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="384dp"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="Select your interests to match with users who have similar things in common."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:layout_constraintVertical_bias="0.044" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="375dp"
+        android:layout_height="45dp"
+        android:background="@drawable/button_shape"
+        android:text="Next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chipGroup" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:outlineProvider="none"
+        app:backgroundTint="@android:color/transparent"
+        app:layout_constraintBottom_toTopOf="@+id/textView10"
+        app:layout_constraintEnd_toStartOf="@+id/textView9"
+        app:layout_constraintHorizontal_bias="0.277"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.767"
+        app:srcCompat="@drawable/ic_baseline_keyboard_backspace_24"
+        app:tint="#FD788C"
+        android:focusable="true" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroup"
+        android:layout_width="359dp"
+        android:layout_height="394dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintVertical_bias="0.216">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🎮Gaming"
+            android:textColor="@color/cherry"
+            android:textSize="17dp"
+            app:chipBackgroundColor="@color/white"
+            app:chipCornerRadius="16dp"
+            app:chipStrokeColor="@color/cherry"
+            app:chipStrokeWidth="2dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="💃Dancing"
+            android:textColor="@color/cherry"
+            android:textSize="17dp"
+            app:chipBackgroundColor="@color/white"
+            app:chipCornerRadius="16dp"
+            app:chipStrokeColor="@color/cherry"
+            app:chipStrokeWidth="2dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🗣️Language"
+            android:textColor="@color/cherry"
+            android:textSize="17dp"
+            app:chipBackgroundColor="@color/white"
+            app:chipCornerRadius="16dp"
+            app:chipStrokeColor="@color/cherry"
+            app:chipStrokeWidth="2dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🎵Music"
+            android:textColor="@color/cherry"
+            android:textSize="17dp"
+            app:chipBackgroundColor="@color/white"
+            app:chipCornerRadius="16dp"
+            app:chipStrokeColor="@color/cherry"
+            app:chipStrokeWidth="2dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🎬Movie"
+            android:textColor="@color/cherry"
+            android:textSize="17dp"
+            app:chipBackgroundColor="@color/white"
+            app:chipCornerRadius="16dp"
+            app:chipStrokeColor="@color/cherry"
+            app:chipStrokeWidth="2dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📷Photography"
+            android:textColor="@color/cherry"
+            android:textSize="17dp"
+            app:chipBackgroundColor="@color/white"
+            app:chipCornerRadius="16dp"
+            app:chipStrokeColor="@color/cherry"
+            app:chipStrokeWidth="2dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🏛️Architecture"
+            android:textColor="@color/cherry"
+            android:textSize="17dp"
+            app:chipBackgroundColor="@color/white"
+            app:chipCornerRadius="16dp"
+            app:chipStrokeColor="@color/cherry"
+            app:chipStrokeWidth="2dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="👗Fashion"
+            android:textColor="@color/cherry"
+            android:textSize="17dp"
+            app:chipBackgroundColor="@color/white"
+            app:chipCornerRadius="16dp"
+            app:chipStrokeColor="@color/cherry"
+            app:chipStrokeWidth="2dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📚Book"
+            android:textColor="@color/cherry"
+            android:textSize="17dp"
+            app:chipBackgroundColor="@color/white"
+            app:chipCornerRadius="16dp"
+            app:chipStrokeColor="@color/cherry"
+            app:chipStrokeWidth="2dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="✍️Writing"
+            android:textColor="@color/cherry"
+            android:textSize="17dp"
+            app:chipBackgroundColor="@color/white"
+            app:chipCornerRadius="16dp"
+            app:chipStrokeColor="@color/cherry"
+            app:chipStrokeWidth="2dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🍃Nature"
+            android:textColor="@color/cherry"
+            android:textSize="17dp"
+            app:chipBackgroundColor="@color/white"
+            app:chipCornerRadius="16dp"
+            app:chipStrokeColor="@color/cherry"
+            app:chipStrokeWidth="2dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🎨Painting"
+            android:textColor="@color/cherry"
+            android:textSize="17dp"
+            app:chipBackgroundColor="@color/white"
+            app:chipCornerRadius="16dp"
+            app:chipStrokeColor="@color/cherry"
+            app:chipStrokeWidth="2dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⚽Football"
+            android:textColor="@color/cherry"
+            android:textSize="17dp"
+            app:chipBackgroundColor="@color/white"
+            app:chipCornerRadius="16dp"
+            app:chipStrokeColor="@color/cherry"
+            app:chipStrokeWidth="2dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="😄People"
+            android:textColor="@color/cherry"
+            android:textSize="17dp"
+            app:chipBackgroundColor="@color/white"
+            app:chipCornerRadius="16dp"
+            app:chipStrokeColor="@color/cherry"
+            app:chipStrokeWidth="2dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🐼Animals"
+            android:textColor="@color/cherry"
+            android:textSize="17dp"
+            app:chipBackgroundColor="@color/white"
+            app:chipCornerRadius="16dp"
+            app:chipStrokeColor="@color/cherry"
+            app:chipStrokeWidth="2dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="💪Gym and Fitness"
+            android:textColor="@color/cherry"
+            android:textSize="17dp"
+            app:chipBackgroundColor="@color/white"
+            app:chipCornerRadius="16dp"
+            app:chipStrokeColor="@color/cherry"
+            app:chipStrokeWidth="2dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🍔Food &amp; Drink"
+            android:textColor="@color/cherry"
+            android:textSize="17dp"
+            app:chipBackgroundColor="@color/white"
+            app:chipCornerRadius="16dp"
+            app:chipStrokeColor="@color/cherry"
+            app:chipStrokeWidth="2dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="✈️Travel &amp; Places"
+            android:textColor="@color/cherry"
+            android:textSize="17dp"
+            app:chipBackgroundColor="@color/white"
+            app:chipCornerRadius="16dp"
+            app:chipStrokeColor="@color/cherry"
+            app:chipStrokeWidth="2dp" />
+
+    </com.google.android.material.chip.ChipGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
