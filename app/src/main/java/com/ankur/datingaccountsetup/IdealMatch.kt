@@ -8,7 +8,9 @@ import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Window
+import android.widget.Button
 import com.ankur.datingaccountsetup.databinding.ActivityIdealMatchBinding
+import com.ankur.datingaccountsetup.databinding.DialogBoxBinding
 import com.google.android.material.card.MaterialCardView
 
 class IdealMatch : AppCompatActivity() {
@@ -20,12 +22,26 @@ class IdealMatch : AppCompatActivity() {
         setContentView(binding.root)
 
 
+
+
+
         binding.nextBtn.setOnClickListener {
-            val dialog = Dialog(this)
+            val dialog =Dialog(this)
             dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
             dialog.setContentView(R.layout.dialog_box)
             dialog.setCancelable(false)
             dialog.show()
+            dialog.findViewById<Button>(R.id.homeBtn).setOnClickListener {
+                Intent(this,MainActivity::class.java).also {
+                    startActivity(it)
+                }
+
+
+
+            }
+        }
+
+
 
             binding.backBtn.setOnClickListener{
                 Intent(this,selectYourInterest::class.java).also {
@@ -33,6 +49,8 @@ class IdealMatch : AppCompatActivity() {
                 }
             }
         }
-    }
+
+
 }
+
 

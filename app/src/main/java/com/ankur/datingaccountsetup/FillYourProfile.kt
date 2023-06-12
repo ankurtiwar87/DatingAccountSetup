@@ -33,26 +33,26 @@ class FillYourProfile : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding=ActivityFillYourProfileBinding.inflate(layoutInflater)
+        binding = ActivityFillYourProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         binding.button.setOnClickListener {
-             Intent(this,AddBestPhoto::class.java).also {
-                 startActivity(it)
-             }
+            Intent(this, AddBestPhoto::class.java).also {
+                startActivity(it)
+            }
 
         }
 
         //making status bar invisible
-        WindowCompat.setDecorFitsSystemWindows(window,false)
+        WindowCompat.setDecorFitsSystemWindows(window, false)
 
-        val windowInsetsController= ViewCompat.getWindowInsetsController(window.decorView)
+        val windowInsetsController = ViewCompat.getWindowInsetsController(window.decorView)
 
-        windowInsetsController?.isAppearanceLightStatusBars=true
+        windowInsetsController?.isAppearanceLightStatusBars = true
 
         //setting vector icons of floating action button
         val myIcon = resources.getDrawable(R.drawable.ic_baseline_arrow_back_24)
-       binding.floatingActionButton2.setImageDrawable(myIcon)
+        binding.floatingActionButton2.setImageDrawable(myIcon)
 
         val myIcon2 = resources.getDrawable(R.drawable.ic_baseline_edit_24)
         binding.floatingActionButton.setImageDrawable(myIcon2)
@@ -69,15 +69,16 @@ class FillYourProfile : AppCompatActivity() {
         }
 
         // Create the gallery launcher
-        galleryLauncher = registerForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri? ->
-            if (uri != null) {
-                selectedImageUri = uri
-                binding.profileImage.setImageURI(selectedImageUri)
+        galleryLauncher =
+            registerForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri? ->
+                if (uri != null) {
+                    selectedImageUri = uri
+                    binding.profileImage.setImageURI(selectedImageUri)
+                }
             }
-        }
 
         //Spinner Items
-        val items = listOf("Gender","Male","Female","Other")
+        val items = listOf("Gender", "Male", "Female", "Other")
 
         // Defining the adapter for the Spinner
         val adapter = CustomSpinnerAdapter(this, items)
@@ -87,9 +88,19 @@ class FillYourProfile : AppCompatActivity() {
 
         //to change color of border of Spinner
         binding.spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
                 // Change the border color
-                binding.spinner.background.setColorFilter(ContextCompat.getColor(this@FillYourProfile, R.color.cherry), PorterDuff.Mode.SRC_ATOP)
+                binding.spinner.background.setColorFilter(
+                    ContextCompat.getColor(
+                        this@FillYourProfile,
+                        R.color.cherry
+                    ), PorterDuff.Mode.SRC_ATOP
+                )
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -107,9 +118,10 @@ class FillYourProfile : AppCompatActivity() {
                     editText.setBackgroundResource(R.drawable.edit_text_border_pink)
                 }
             }
+
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
         })
     }
-
 }
+
